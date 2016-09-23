@@ -1,0 +1,11 @@
+{
+  "name": "jwt-cli",
+  "version": "0.0.0",
+  "dependencies": {
+    "njwt": "0.3.1"
+  },
+  "devDependencies": { },
+  "engines": {
+    "node": ">=0.12.0"
+  }
+}
