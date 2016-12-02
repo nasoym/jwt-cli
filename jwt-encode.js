@@ -15,6 +15,10 @@ var secret = fs.readFileSync(private_key_file,"utf8");
 var payload = JSON.parse(fs.readFileSync(payload_file, 'utf8'));
 var token = njwt.create(payload, secret, "RS256");
 
+if ( "exp" in payload ) {
+  token.setExpiration(payload.exp * 1000);
+}
+
 if (header_file !== undefined) {
   var headers = JSON.parse(fs.readFileSync(header_file, 'utf8'));
   if ( "typ" in headers ) {
