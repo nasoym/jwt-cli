@@ -11,5 +11,5 @@ if (jwt_file === undefined) {
 
 var token = fs.readFileSync(jwt_file, 'utf8');
 
-console.log(jwt(token));
+console.log(JSON.stringify(jwt(token)));
 
